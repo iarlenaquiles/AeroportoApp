@@ -63,6 +63,7 @@ public class MainActivity extends Activity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 image.setVisibility(View.INVISIBLE);
+                texto.setText("Toque para continuar.");
             }
 
             @Override
