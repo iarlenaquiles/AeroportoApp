@@ -24,6 +24,12 @@ public class MainActivity extends Activity {
     }
 
     public void clicouTela(View view) {
-        image.setScaleX(-1f);
+        if(Math.random() < 0.5) {
+            texto.setText("Siga para Esquerda");
+            image.setScaleX(1f);
+        } else {
+            texto.setText("Siga para Direita");
+            image.setScaleX(-1f);
+        }
     }
 }
