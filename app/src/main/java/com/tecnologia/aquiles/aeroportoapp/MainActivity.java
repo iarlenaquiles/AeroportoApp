@@ -9,6 +9,9 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class MainActivity extends Activity {
 
@@ -79,5 +82,12 @@ public class MainActivity extends Activity {
         }
 
         image.startAnimation(aparece);
+
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                image.startAnimation(some);
+            }
+        },2000);
     }
 }
